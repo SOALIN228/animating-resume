@@ -8,19 +8,19 @@
 }
 
 .token.selector {
-    color: black;
+    color: #fff;
 }
 
 .token.property {
-    color: black;
+    color: #fff;
 }
 
 .token.function {
-    color: black;
+    color: #fff;
 }
 
 .token.punctuation {
-    color: black;
+    color: #fff;
 }
 
 #code-wrapper {
@@ -31,7 +31,7 @@
 
 #code {
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     background: #272822;
     color: #fff;
 }
@@ -72,4 +72,3 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
     }
 }
-
