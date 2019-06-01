@@ -39,6 +39,14 @@ let result =
    display: block;
  }
  
+ /* 添加一些3d效果 */
+ #code-wrapper {
+   perspective: 1000px;
+ }
+ #code {
+   transition: none;
+   transform: rotateY(10deg) translateZ(-100px);
+ }
  
  /* 于是我就可以在白纸上写字了，请看右边 */
  
@@ -61,23 +69,85 @@ let result3 =
 
 let md = `
 # 自我介绍
-我叫 XXX
-1990 年 1 月出生
-XXX 学校毕业
-自学前端半年
-希望应聘前端开发岗位
+我叫 李明林
+
+21 岁
+
+浙江万里学院 大三学生
+
+自学前端一年
+
+希望应聘前端实习生
+
 # 技能介绍
-熟悉 JavaScript CSS
+- Vue
+
+  熟悉 Vue 常用功能，如组件、Vue-Router、双向绑定等
+
+- jQuery
+
+  熟悉 jQuery 的常用 API、AJAX，能使用 jQuery 制作网站、轮播等
+
+- 移动端页面
+
+  会使用 viewport REM、vw/vh、FastClick 等技术制作适配手机设备的页面
+
+- 原生 JavaScript
+
+  熟悉原生 JS，可以使用原生 JS 开发
+
+  熟悉 this、闭包、原型链、异步、DOM API
+
+- HTML5 & CSS3
+
+  能独立制作精美网页，掌握 CSS 3 动画、过渡效果、响应式等常用技术
+
+- webpack
+
+  了解常用 Loader 和 Plugins，可以独立搭建一个 webpack 开发和生成环境
+
+- 微信小程序制作
+
+  了解小程序开发，了解小程序生命周期、API
+
+- 其他
+
+  了解 MVC 设计模式，可以使用 MVC 编写代码
+
+  了解ES6 解构赋值、Promise等
+
+  了解 Sass 基本语法和代码复用
+
+  了解HTTP协议，可以完成与后端的合作，完成项目
 
 # 项目介绍
-1. XXX 轮播
-2. XXX 简历
-3. XXX 画板
+canvas画板
+
+[预览](https://soalin228.github.io/mycanvas/index.html) [源码](https://github.com/SOALIN228/mycanvas)
+
+关键字：canvas、JS、SVG
+
+描述：该项目使用原生JS实现，支持移动端访问，主要调用 Canvas API，实现了划线、调色、橡皮擦、保存等功能
+
+网站导航
+
+[预览](https://soalin228.github.io/nav-demo/index.html) [源码](https://github.com/SOALIN228/nav-demo)
+
+关键字：localstorage、JS
+
+描述：用户按下按键即可访问到图标显示的对应网站、用户可以自己设置跳转对应的网站，使用localstorage进行存储
+
+画一个皮卡丘
+
+[预览](https://soalin228.github.io/Pikachu/index.html) [源码](https://github.com/SOALIN228/Pikachu)
+
+关键字：CSS、JS、prism
+
+描述：纯CSS实现皮卡丘的绘制，支持移动端访问，使用 prism 添加代码高亮
 
 # 联系方式
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
+- Email soalin228@163.com
+- 手机 17606874115
 `
 
 function writeCode (prefix, code, fn) {
@@ -95,7 +165,7 @@ function writeCode (prefix, code, fn) {
       window.clearInterval(id)
       fn &&  fn.call() // call过去
     }
-  }, 70)
+  }, 40)
 }
 
 function writeMarkdown(markdown, fn){
